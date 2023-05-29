@@ -1,0 +1,36 @@
+.signup-first,
+.signup-second {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.name-group,
+.btn-group {
+    width: 100%;
+    display: flex;
+}
+
+.name-group-input,
+.btn-group-input {
+    width: 45%;
+}
+
+.left {
+    margin-left: 10% !important;
+}
+
+.signup-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btn-group {
+    margin-top: 10px;
+}
+
+.input-value {
+    color: #706f6f;
+    margin-top: -5px !important;
+}
