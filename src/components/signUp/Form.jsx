@@ -48,7 +48,7 @@ const Form = () => {
         }
     } */
 
-    const pageDisplay = () => {
+    /* const pageDisplay = () => {
         const pageComponents = {
             0: <SignUpFirst setPage={setPage} formData={formData} setFormData={setFormData} />,
             1: <SignUpSecond setPage={setPage} formData={formData} setFormData={setFormData} />,
@@ -64,11 +64,33 @@ const Form = () => {
                 {componentToDisplay}
             </div>
         );
-    };
+    }; */
 
     return (
         <div className='form-body'>
-            {pageDisplay()}
+            {/* {pageDisplay()} */}
+            {page <= 2 && <SignUpHeader />}
+            {page === 0 && (
+                <SignUpFirst
+                    setPage={setPage}
+                    formData={formData}
+                    setFormData={setFormData}
+                />
+            )}
+            {page === 1 && (
+                <SignUpSecond
+                    setPage={setPage}
+                    formData={formData}
+                    setFormData={setFormData}
+                />
+            )}
+            {page === 2 && (
+                <FormValue
+                    setPage={setPage}
+                    formData={formData}
+                />
+            )}
+            {page === 3 && <SignUpConfirm />}
         </div>
     )
 }
